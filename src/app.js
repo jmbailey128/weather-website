@@ -13,7 +13,7 @@ const forecastApiKey = '456613819c794fabaf2110826231905';
 //=== Initialize and configure Express ===//
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', viewsDirPath);
@@ -77,15 +77,6 @@ app.get('/weather', (req, res) => {
         });
     });
 });
-
-// app.get('/products', (req, res) => {
-//     if (!req.query.search) {
-//         return res.send({
-//             error: 'You must provide a search term'
-//         });
-//     }
-//     res.send({ products: [] });
-// });
 
 
 //=== Error handling ===//
