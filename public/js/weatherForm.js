@@ -1,5 +1,3 @@
-console.log('Hello from weatherForm.js');
-
 const weatherForm = document.querySelector('#weatherForm');
 const addressInput = document.querySelector('#addressInput');
 
