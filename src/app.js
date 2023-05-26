@@ -69,8 +69,10 @@ app.get('/weather', (req, res) => {
                 return res.send({ error: forecastError });
             }
 
+            const forecastMessage = `${forecastData.current.condition.text}. The temperature is ${forecastData.current.temp_c} degrees celcius, the humidity is ${forecastData.current.humidity} and visibility is ${forecastData.current.vis_miles} miles.<br><img src="${forecastData.current.condition.icon}">`;
+
             res.send({
-                forecast: `${forecastData.current.condition.text}. The temperature is ${forecastData.current.temp_c} degrees celcius and the humidity is ${forecastData.current.humidity}`,
+                forecast: forecastMessage,
                 location: forecastData.location,
                 address: req.query.address
             })
