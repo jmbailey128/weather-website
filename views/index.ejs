@@ -1,0 +1,9 @@
+<%- include('partials/header') -%>
+<p><%= message %></p>
+<form id="weatherForm" action="" data-form-results="formResults" data-bob="fossil">
+    <input type="text" id="addressInput" placeholder="Address">
+    <button type="submit">Search</button>
+</form>
+<div id="formResults"></div>
+<script src="/js/weatherForm.js"></script>
+<%- include('partials/footer') -%>
